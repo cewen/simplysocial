@@ -1,0 +1,14 @@
+@import 'utils/breakpoints';
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/when-than';
+
+@import 'vendors/normalize';
+
+@import 'base/colors';
+@import 'base/typography';
+@import 'base/base';
+
+body {
+    color: red;
+}

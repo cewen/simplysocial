@@ -1,0 +1,83 @@
+{
+    "excludeFiles": ["node_modules/**", "bower_components/**", "src/client/app/core/modernizr.js"],
+
+    "requireCurlyBraces": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "try",
+        "catch"
+    ],
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+    "validateIndentation": 4,
+    "validateQuoteMarks": "'",
+
+    "disallowMultipleSpaces": true,
+    "disallowMultipleLineStrings": true,
+    "disallowMixedSpacesAndTabs": true,
+    "disallowTrailingWhitespace": true,
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowMultipleVarDecl": true,
+
+    "requireSpaceAfterKeywords": [
+      "if",
+      "else",
+      "for",
+      "while",
+      "do",
+      "switch",
+      "return",
+      "try",
+      "catch"
+    ],
+    "requireSpaceBeforeBinaryOperators": [
+        "=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", ">>>=",
+        "&=", "|=", "^=", "+=",
+
+        "+", "-", "*", "/", "%", "<<", ">>", ">>>", "&",
+        "|", "^", "&&", "||", "===", "==", ">=",
+        "<=", "<", ">", "!=", "!=="
+    ],
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpacesInConditionalExpression": true,
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpaceAfterLineComment": true,
+    "requireLineFeedAtFileEnd": true,
+    "disallowSpacesInsideParentheses": true,
+
+    "jsDoc": {
+        "checkParamNames": true,
+        "requireParamTypes": true
+    },
+    "disallowMultipleLineBreaks": true,
+
+    "disallowCommaBeforeLineBreak": null,
+    "disallowDanglingUnderscores": null,
+    "disallowEmptyBlocks": true,
+    "disallowTrailingComma": true,
+    "requireCommaBeforeLineBreak": true,
+    "requireDotNotation": null,
+    "requireMultipleVarDecl": null,
+    "requireParenthesesAroundIIFE": true,
+    
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowOperatorBeforeLineBreak": ["."],
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowSpaceBeforePostfixUnaryOperators": true,
+    "disallowSpacesInFunction": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInCallExpression": true,
+    "disallowYodaConditions": true,
+    "requireBlocksOnNewline": true,
+    "requireDollarBeforejQueryAssignment": true,
+    "requireKeywordsOnNewLine": ["else"],
+    "requireLineBreakAfterVariableAssignment": true,
+    "requirePaddingNewLinesAfterBlocks": {
+        "allExcept": ["inCallExpressions", "inArrayExpressions", "inProperties"]
+    },
+    "requirePaddingNewLinesAfterUseStrict": true,
+    "requireSemicolons": true
+}
