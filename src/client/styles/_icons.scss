@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'simply-social-icons';
+	src:url('../fonts/simply-social-icons.eot?ct9q8b');
+	src:url('../fonts/simply-social-icons.eot?ct9q8b#iefix') format('embedded-opentype'),
+		url('../fonts/simply-social-icons.ttf?ct9q8b') format('truetype'),
+		url('../fonts/simply-social-icons.woff?ct9q8b') format('woff'),
+		url('../fonts/simply-social-icons.svg?ct9q8b#simply-social-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'simply-social-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+	content: "\e600";
+}
+.icon-close:before {
+	content: "\e601";
+}
+.icon-email:before {
+	content: "\e602";
+}
+.icon-grid:before {
+	content: "\e603";
+}
+.icon-heart:before {
+	content: "\e604";
+}
+.icon-list:before {
+	content: "\e605";
+}
+.icon-new-message:before {
+	content: "\e606";
+}
+.icon-password:before {
+	content: "\e607";
+}
+.icon-photo:before {
+	content: "\e608";
+}
+.icon-play:before {
+	content: "\e609";
+}
+.icon-search:before {
+	content: "\e60a";
+}
+.icon-share:before {
+	content: "\e60b";
+}
+.icon-user:before {
+	content: "\e60c";
+}
+.icon-video:before {
+	content: "\e60d";
+}
