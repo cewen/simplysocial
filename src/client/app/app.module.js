@@ -3,7 +3,8 @@
 
     angular.module('app', [
         'app.core',
-        'app.landing'
+        'app.landing',
+        'app.settings'
     ]);
 
 })();
