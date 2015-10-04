@@ -22,7 +22,6 @@
  - Run the optimize project from the build folder with `gulp serve-build`
 
 ## Exploring SimplySocial
-HotTowel Angular starter project
 
 ### Structure
 The structure also contains a gulpfile.js and a server folder. The server is there just so we can serve the app using node. Feel free to use any server you wish.
