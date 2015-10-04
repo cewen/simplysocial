@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'proxima-nova-black';
+    src: url('../fonts/ProximaNova-Black.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-bold';
+    src: url('../fonts/ProximaNova-Bold.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-bold-italic';
+    src: url('../fonts/ProximaNova-BoldIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-extra-bold';
+    src: url('../fonts/ProximaNova-Extrabld.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-light';
+    src: url('../fonts/ProximaNova-Light.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-light-italic';
+    src: url('../fonts/ProximaNova-LightIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-regular';
+    src: url('../fonts/ProximaNova-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-regular-italic';
+    src: url('../fonts/ProximaNova-RegularIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-semibold';
+    src: url('../fonts/ProximaNova-Semibold.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-semibold-italic';
+    src: url('../fonts/ProximaNova-SemiboldIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-light';
+    src: url('../fonts/ProximaNovaCond-Light.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-light-italic';
+    src: url('../fonts/ProximaNovaCond-LightIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-regular';
+    src: url('../fonts/ProximaNovaCond-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-regular-italic';
+    src: url('../fonts/ProximaNovaCond-RegularIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-semibold';
+    src: url('../fonts/ProximaNovaCond-Semibold.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-condensed-semibold-italic';
+    src: url('../fonts/ProximaNovaCond-SemiboldIt.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+// Extendable Type Styles
+
+%type-page-heading {
+    @include webfont('proxima-nova-regular');
+    font-size: 30px;
+}
+
+%type-post-heading {
+    @include webfont('proxima-nova-regular');
+    font-size: 16px;
+}
+
+%type-body {
+    @include webfont('proxima-nova-regular');
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+%type-timestamp {
+    @include webfont('proxima-nova-regular');
+    font-size: 14px;
+}
+
+%type-navigation-caps {
+    @include webfont('proxima-nova-bold');
+    font-size: 12px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+%type-footer-caps {
+    @include webfont('proxima-nova-semibold');
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+%type-eyebrow {
+    @include webfont('proxima-nova-semibold');
+    font-size: 13px;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+}
+
+%type-button {
+    @include webfont('proxima-nova-semibold');
+    font-size: 14px;
+}
+
+%type-label {
+    @extend %type-post-heading;
+}
+
+%type-input {
+    @extend %type-post-heading;
+}

@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    @extend %type-body;
     color: $color-body-text;
 }
 
@@ -21,4 +22,19 @@ ul,
 li {
     list-style: none;
     padding: 0;
+}
+
+
+// Forms
+input {
+    @extend %type-input;
+}
+
+label {
+    @extend %type-label;
+}
+
+button {
+    @extend %type-button;
+    color: $white;
 }
