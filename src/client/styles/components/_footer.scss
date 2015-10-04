@@ -1,0 +1,26 @@
+.footer {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid $color-borders;
+
+    &__link {
+        @extend %type-footer-caps;
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    &__link-anchor {
+        color: $color-footer-links;
+    }
+
+    &__copyright {
+        @extend %type-footer-caps;
+        margin: 0 10px;
+    }
+    
+    @include when-wider-than(tablet) {
+        &__links {
+            display: inline;
+        }
+    }
+}
