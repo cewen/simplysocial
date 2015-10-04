@@ -9,6 +9,7 @@
             'blocks.logger',
             'blocks.router',
             'ui.router',
-            'app.navigation'
+            'app.navigation',
+            'app.footer'
         ]);
 })();
