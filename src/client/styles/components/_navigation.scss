@@ -1,0 +1,104 @@
+$profile-nav-bg: #f4f5f7;
+
+.navigation {
+    height: 60px;
+    padding: 0 100px;
+    background: #262728;
+
+    &__logo {
+        width: 132px;
+        margin-top: 17px;
+    }
+
+    &__right {
+        float: right;
+        margin-top: 14px;
+    }
+
+    &__new-message {
+        @include vertical-center;
+        font-size: 30px;
+        color: $green;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: 2px
+    }
+
+    &__search-form {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    &__search-icon {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        pointer-events: none;
+    }
+
+    &__search {
+        color: $white;
+        width: 200px;
+        height: 30px;
+        border-color: #44474b;
+    }
+
+    &__profile {
+        @include vertical-center;
+        height: 30px;
+        position: relative;
+    }
+
+    &__profile-display {
+        height: 45px;
+        cursor: pointer;
+    }
+
+    &__profile-photo {
+        @include vertical-center;
+        width: 30px;
+        border-radius: $global-border-radius;
+    }
+
+    &__profile-expand {
+        @include vertical-center;
+        font-size: 10px;
+    }
+
+    &__profile-nav {
+        position: absolute;
+        left: -32px;
+        top: 40px;
+        width: 95px;
+        margin: 0;
+        border-radius: $global-border-radius;
+        background: $profile-nav-bg;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 19px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $profile-nav-bg;
+        }
+    }
+
+    &__profile-link {
+        border-bottom: 1px solid #dee1e5;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__profile-anchor {
+        font-size: 12px;
+        line-height: 30px;
+        padding: 0 15px;
+    }
+}

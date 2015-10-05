@@ -14,7 +14,13 @@ body {
 }
 
 a {
+    transition: color $global-transition-time $global-easing-function;
     text-decoration: none;
+    color: $color-links;
+
+    &:hover {
+        color: $green;
+    }
 }
 
 img {
@@ -32,6 +38,12 @@ li {
 // Forms
 input {
     @extend %type-input;
+    color: $color-input-text;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid $color-borders;
+    border-radius: $global-border-radius;
+    background: none;
 }
 
 label {
