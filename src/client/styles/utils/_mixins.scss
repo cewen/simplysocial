@@ -1,3 +1,8 @@
 @mixin webfont($font) {
     font-family: $font, Helvetica, Arial, sans-serif;
 }
+
+@mixin vertical-center() {
+    display: inline-block;
+    vertical-align: middle;
+}
