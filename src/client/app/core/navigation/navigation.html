@@ -1,1 +1,25 @@
-Navigation module
+<nav class="navigation" >
+    <a ui-sref="landing">
+        <img src="/images/logo.png" alt="SimplySocial logo" class="navigation__logo">
+    </a>
+
+    <div class="navigation__right">
+        <span class="navigation__new-message icon-new-message"></span>
+        <form class="navigation__search-form">
+            <span class="navigation__search-icon icon-search"></span>
+            <input type="text" class="navigation__search">
+        </form>
+
+        <div class="navigation__profile" ng-mouseover="vm.openProfileNav()" ng-mouseleave="vm.closeProfileNav()">
+            <div class="navigation__profile-display" >
+                <img src="/images/user.jpg" alt="User profile photo" class="navigation__profile-photo">
+                <span class="navigation__profile-expand icon-arrow-down"></span>
+            </div>
+            <ul class="navigation__profile-nav" ng-if="vm.profileNavOpen">
+                <li class="navigation__profile-link" ng-repeat="link in vm.profileLinks">
+                    <a ui-sref="{{link.path}}" class="navigation__profile-anchor">{{link.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
