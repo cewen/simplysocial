@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('app.landing', [
-        'app.core'
+        'app.core',
+        'app.hero'
       ]);
 })();
