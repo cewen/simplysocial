@@ -1,0 +1,71 @@
+$transparent-white: rgba($white, .5);
+
+.hero-module {
+    height: 300px;
+    padding-top: 65px;
+    background: url(../images/hero-bg.jpg) no-repeat;
+    background-size: cover;
+
+    &__post {
+        width: 300px;
+        height: 155px;
+        padding: 40px 30px 25px;
+        margin: 0 auto;
+        border-radius: $global-border-radius;
+        background: rgba($green, .7);
+    }
+
+    &__input {
+        @include webfont('proxima-nova-light');
+        font-size: 20px;
+        color: $white;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+        border: 0;
+
+        &::-webkit-input-placeholder {
+            color: $transparent-white;
+        }
+
+        &::-moz-placeholder {
+            color: $transparent-white;
+        }
+
+        &:-ms-input-placeholder {
+            color: $transparent-white;
+        }
+    }
+
+    &__add-button {
+        font-size: 14px;
+        line-height: 18px;
+        color: $transparent-white;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__add-icon {
+        font-size: 18px;
+        margin-right: 4px;
+        position: relative;
+        top: 2px;
+    }
+
+    @include when-wider-than(tablet) {
+        height: 425px;
+        padding-top: 120px;
+
+        &__post {
+            width: 575px;
+        }
+
+        &__input {
+            font-size: 30px;
+        }
+
+        &__add-button {
+            margin-right: 40px;
+        }
+    }
+}
