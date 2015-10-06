@@ -1,9 +1,11 @@
 $profile-nav-bg: #f4f5f7;
 
 .navigation {
+    width: 100%;
     height: 60px;
-    padding: 0 100px;
+    padding: 0 20px;
     background: #262728;
+    position: fixed;
 
     &__logo {
         width: 132px;
@@ -31,10 +33,7 @@ $profile-nav-bg: #f4f5f7;
     }
 
     &__search-icon {
-        position: absolute;
-        right: 10px;
-        top: 8px;
-        pointer-events: none;
+        @include vertical-center;
     }
 
     &__search {
@@ -100,5 +99,30 @@ $profile-nav-bg: #f4f5f7;
         font-size: 12px;
         line-height: 30px;
         padding: 0 15px;
+    }
+
+    @include when-less-than(tablet) {
+        &__search-icon {
+            font-size: 22px;
+            color: $green;
+            cursor: pointer;
+        }
+
+        &__search {
+            // Idea here is to implement a search overlay of sorts for mobile
+            // Clicking search-icon (above) would open up the search input
+            display: none;
+        }
+    }
+
+    @include when-wider-than(tablet) {
+        padding: 0 100px;
+        
+        &__search-icon {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            pointer-events: none;
+        }
     }
 }
