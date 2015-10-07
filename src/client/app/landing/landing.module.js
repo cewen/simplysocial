@@ -3,6 +3,8 @@
 
     angular.module('app.landing', [
         'app.core',
-        'app.hero'
+        'app.hero',
+        'app.posts',
+        'wu.masonry'
       ]);
 })();
