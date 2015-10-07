@@ -1,0 +1,91 @@
+.posts {
+    text-align: center;
+    max-width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.post {
+    text-align: left;
+    width: calc(100% - 40px);
+    padding: 24px 24px 20px 82px;
+    margin: 0 12px 24px;
+    border: 1px solid #dee1e5;
+    border-radius: $global-border-radius;
+    background: $white;
+    position: relative;
+    float: left;
+
+    &__user-image {
+        width: 40px;
+        border-radius: $global-border-radius;
+        position: absolute;
+        left: 24px;
+        top: 24px;
+    }
+
+    &__user-name {
+        @extend %type-post-heading;
+        line-height: 1em;
+        font-weight: normal;
+        color: $color-headings;
+        margin: 0;
+    }
+
+    &__text {
+        margin: 10px 0 0;
+    }
+
+    &__media {
+        margin: 10px 0 0 -83px;
+    }
+
+    &__media-item {
+        width: calc(100% + 25px);
+    }
+
+    &__footer {
+        color: $color-icons;
+        margin-top: 15px;
+    }
+
+    &__expand {
+        float: left;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    &__expand-arrow {
+        font-size: 8px;
+    }
+
+    &__footer-options {
+        float: right;
+    }
+
+    &__footer-option {
+        @include vertical-center;
+        font-size: 14px;
+
+        &.icon-share,
+        &.icon-heart {
+            font-size: 12px;
+            margin-right: 15px;
+        }
+    }
+
+    @include when-on(tablet) {
+        width: calc(50% - 24px);
+    }
+
+    @include when-wider-than(small_desktop) {
+        width: calc(33% - 24px);
+    }
+}
+
+.load-more-posts {
+    @extend %type-eyebrow;
+    font-size: 12px;
+    text-align: center;
+    margin: 60px 0 80px;
+}
