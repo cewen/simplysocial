@@ -12,7 +12,7 @@
         "user": "Meg Robichaud",
         "userImage": "/images/user.jpg",
         "text": "My view this morning is simply beautiful... <a href=\"http://instagram.com/p/mV0PUrHRwQ/\">instagram.com/p/mV0PUrHRwQ/</a>",
-        "media": "http://instagram.com/p/mV0PUrHRwQ/",
+        "media": "/images/post-image-1.jpg",
         "time": "25m"
     },
     {
@@ -28,7 +28,7 @@
         "user": "Vitor Leal",
         "userImage": "/images/user.jpg",
         "text": "You have to see this bike... <a href=\"http://vimeo.com/p/mV0PUrHRwQ/\">vimeo.com/p/mV0PUrHRwQ/</a>",
-        "media": "http://vimeo.com/p/mV0PUrHRwQ/",
+        "media": "135911266",
         "time": "1h"
     },
     {
@@ -44,7 +44,7 @@
         "user": "Jenny Shen",
         "userImage": "/images/user.jpg",
         "text": "Perfect day to be taking pictures <a href=\"http://instagram.com/p/mV0PUrHRwQ/\">instagram.com/p/mV0PUrHRwQ/</a>",
-        "media": "http://instagram.com/p/mV0PUrHRwQ/",
+        "media": "/images/post-image-2.jpg",
         "time": "25m"
     }
 ]

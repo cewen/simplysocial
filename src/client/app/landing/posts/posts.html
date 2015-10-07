@@ -1,0 +1,31 @@
+<nav class="posts-nav">Placeholder for posts nav</nav>
+
+<div class="posts" masonry>
+    <div class="post masonry-brick" ng-repeat="post in vm.posts">
+        <img ng-src="{{post.userImage}}" alt="Photo of {{post.user}}" class="post__user-image">
+        <h2 class="post__user-name">{{post.user}}</h2>
+        <p class="post__text" ng-bind-html="post.text"></p>
+
+        <div class="post__media" ng-if="post.type !== 'text'">
+            <img ng-src={{post.media}} ng-if="post.type === 'image'" class="post__media-item">
+            <div ng-if="post.type === 'video'" class="post__media-item">
+                <iframe ng-src="{{vm.getIframeSrc(post.media)}}" width="100%" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <footer class="post__footer">
+            <div class="post__expand" ng-if="post.type === 'text'">
+                Expand <span class="post__expand-arrow icon-arrow-down"></span>
+            </div>
+            <ul class="post__footer-options">
+                <li class="post__footer-option icon-share"></li>
+                <li class="post__footer-option icon-heart"></li>
+                <li class="post__footer-option">{{post.time}}</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+
+<div class="load-more-posts">
+    <a href="#">Load More</a>
+</div>
