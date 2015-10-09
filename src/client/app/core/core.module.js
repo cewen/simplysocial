@@ -10,6 +10,7 @@
             'blocks.router',
             'ui.router',
             'app.navigation',
-            'app.footer'
+            'app.footer',
+            'app.newPost'
         ]);
 })();

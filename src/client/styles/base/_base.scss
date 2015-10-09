@@ -52,5 +52,11 @@ label {
 
 button {
     @extend %type-button;
+    line-height: 35px;
     color: $white;
+    height: 35px;
+    padding: 0 20px;
+    background: $green;
+    border: 0;
+    border-radius: $global-border-radius;
 }
