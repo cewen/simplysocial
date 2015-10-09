@@ -18,26 +18,43 @@
         return directive;
     }
 
-    SsNewPostController.$inject = ['$scope'];
+    SsNewPostController.$inject = ['$scope', '$rootScope'];
 
-    function SsNewPostController($scope) {
+    function SsNewPostController($scope, $rootScope) {
         var vm = this;
 
         vm.newPostOverlayOpen = false;
 
         vm.closeNewPostOverlay = closeNewPostOverlay;
+        vm.addNewPost = addNewPost;
+        vm.newPost = {
+            type: 'text',
+            user: 'Jessica Tuan',
+            userImage: '/images/user.jpg',
+            media: '',
+            time: '1s'
+        };
 
         $scope.$on('openNewPostOverlay', openNewPostOverlay);
 
         function openNewPostOverlay() {
             vm.newPostOverlayOpen = true;
-
             angular.element('.page-content').addClass('overlay-open');
         }
 
         function closeNewPostOverlay() {
             vm.newPostOverlayOpen = false;
             angular.element('.page-content').removeClass('overlay-open');
+        }
+
+        function addNewPost() {
+            var post = {};
+            _.assign(post, vm.newPost);
+            $rootScope.$broadcast('addNewPost', post);
+
+            // Clear and close overlay
+            vm.newPost.text = '';
+            closeNewPostOverlay();
         }
     }
 })();

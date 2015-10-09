@@ -12,7 +12,7 @@
 </nav>
 
 <div class="posts posts--grid" masonry ng-if="vm.postLayout === 'grid'" ng-class="{ 'posts--photos': vm.postType === 'photo', 'posts--videos': vm.postType === 'video' }">
-    <div class="post masonry-brick" ng-repeat="post in vm.posts" ng-show="vm.postType === 'all' || vm.postType === post.type">
+    <div class="post masonry-brick" ng-repeat="post in vm.posts track by $index" ng-show="vm.postType === 'all' || vm.postType === post.type">
         <img ng-src="{{post.userImage}}" alt="Photo of {{post.user}}" class="post__user-image">
         <h2 class="post__user-name">{{post.user}}</h2>
         <p class="post__text" ng-bind-html="post.text"></p>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="posts posts--list" ng-if="vm.postLayout === 'list'" ng-class="{ 'posts--photos': vm.postType === 'photo', 'posts--videos': vm.postType === 'video' }">
-    <div class="post" ng-repeat="post in vm.posts" ng-show="vm.postType === 'all' || vm.postType === post.type">
+    <div class="post" ng-repeat="post in vm.posts track by $index" ng-show="vm.postType === 'all' || vm.postType === post.type">
         <img ng-src="{{post.userImage}}" alt="Photo of {{post.user}}" class="post__user-image">
         <h2 class="post__user-name">{{post.user}}</h2>
         <p class="post__text" ng-bind-html="post.text"></p>
