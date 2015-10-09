@@ -18,14 +18,15 @@
         return directive;
     }
 
-    SsNavigationController.$inject = [];
+    SsNavigationController.$inject = ['$rootScope'];
 
-    function SsNavigationController() {
+    function SsNavigationController($rootScope) {
         var vm = this;
 
         vm.profileNavOpen = false;
         vm.openProfileNav = openProfileNav;
         vm.closeProfileNav = closeProfileNav;
+        vm.openNewPostOverlay = openNewPostOverlay;
 
         vm.profileLinks = [
             { title: 'Profile', path: 'landing' },
@@ -40,6 +41,10 @@
 
         function closeProfileNav() {
             vm.profileNavOpen = false;
+        }
+
+        function openNewPostOverlay() {
+            $rootScope.$broadcast('openNewPostOverlay');
         }
     }
 })();
