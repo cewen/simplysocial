@@ -1,13 +1,50 @@
-<nav class="posts-nav">Placeholder for posts nav</nav>
+<nav class="posts-nav">
+    <ul class="posts-nav__types">
+        <li class="posts-nav__type" ng-class="{ 'posts-nav__type--selected': vm.postType === 'all' }" ng-click="vm.setPostType('all')">All Posts</li>
+        <li class="posts-nav__type" ng-class="{ 'posts-nav__type--selected': vm.postType === 'photo' }" ng-click="vm.setPostType('photo')">Photos</li>
+        <li class="posts-nav__type" ng-class="{ 'posts-nav__type--selected': vm.postType === 'video' }" ng-click="vm.setPostType('video')">Videos</li>
+    </ul>
 
-<div class="posts" masonry>
-    <div class="post masonry-brick" ng-repeat="post in vm.posts">
+    <ul class="posts-nav__layouts">
+        <li class="posts-nav__layout icon-list" ng-class="{ 'posts-nav__layout--selected': vm.postLayout === 'list' }" ng-click="vm.setPostLayout('list')"></li>
+        <li class="posts-nav__layout icon-grid" ng-class="{ 'posts-nav__layout--selected': vm.postLayout === 'grid' }" ng-click="vm.setPostLayout('grid')"></li>
+    </ul>
+</nav>
+
+<div class="posts posts--grid" masonry ng-if="vm.postLayout === 'grid'" ng-class="{ 'posts--photos': vm.postType === 'photo', 'posts--videos': vm.postType === 'video' }">
+    <div class="post masonry-brick" ng-repeat="post in vm.posts" ng-show="vm.postType === 'all' || vm.postType === post.type">
         <img ng-src="{{post.userImage}}" alt="Photo of {{post.user}}" class="post__user-image">
         <h2 class="post__user-name">{{post.user}}</h2>
         <p class="post__text" ng-bind-html="post.text"></p>
 
         <div class="post__media" ng-if="post.type !== 'text'">
-            <img ng-src={{post.media}} ng-if="post.type === 'image'" class="post__media-item">
+            <img ng-src={{post.media}} ng-if="post.type === 'photo'" class="post__media-item">
+            <div ng-if="post.type === 'video'" class="post__media-item">
+                <iframe ng-src="{{vm.getIframeSrc(post.media)}}" width="100%" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <footer class="post__footer">
+            <div class="post__expand" ng-if="post.type === 'text'">
+                Expand <span class="post__expand-arrow icon-arrow-down"></span>
+            </div>
+            <ul class="post__footer-options">
+                <li class="post__footer-option icon-share"></li>
+                <li class="post__footer-option icon-heart"></li>
+                <li class="post__footer-option">{{post.time}}</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+
+<div class="posts posts--list" ng-if="vm.postLayout === 'list'" ng-class="{ 'posts--photos': vm.postType === 'photo', 'posts--videos': vm.postType === 'video' }">
+    <div class="post" ng-repeat="post in vm.posts" ng-show="vm.postType === 'all' || vm.postType === post.type">
+        <img ng-src="{{post.userImage}}" alt="Photo of {{post.user}}" class="post__user-image">
+        <h2 class="post__user-name">{{post.user}}</h2>
+        <p class="post__text" ng-bind-html="post.text"></p>
+
+        <div class="post__media" ng-if="post.type !== 'text'">
+            <img ng-src={{post.media}} ng-if="post.type === 'photo'" class="post__media-item">
             <div ng-if="post.type === 'video'" class="post__media-item">
                 <iframe ng-src="{{vm.getIframeSrc(post.media)}}" width="100%" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
