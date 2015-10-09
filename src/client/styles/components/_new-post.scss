@@ -1,0 +1,83 @@
+.new-post {
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    &__form {
+        width: 300px;
+        padding: 20px 25px 15px;
+        margin: 150px auto 0;
+        background: #dee1e5;
+        border-radius: $global-border-radius;
+        position: relative;
+    }
+    
+    &__close {
+        font-size: 18px;
+        color: #626870;
+        position: absolute;
+        top: -22px;
+        right: -22px;
+        cursor: pointer;
+    }
+
+    &__textarea {
+        @extend %type-input;
+        display: block;
+        width: 100%;
+        height: 90px;
+        padding: 10px;
+        margin: 10px 0 15px;
+        border: 0;
+        border-radius: $global-border-radius;
+    }
+
+    &__footer {
+        text-align: right;
+        overflow: hidden;
+    }
+
+    &__add-button {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 20px;
+        cursor: pointer;
+        position: relative;
+        top: 5px;
+    }
+
+    &__add-icon {
+        font-size: 18px;
+        margin-right: 4px;
+        position: relative;
+        top: 2px;
+    }
+
+    &__button {
+        margin-top: 15px;
+        float: right;
+    }
+
+    @include when-wider-than(tablet) {
+        &__form {
+            width: 575px;
+        }
+
+        &__footer {
+            text-align: left;
+        }
+
+        &__add-button {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+
+        &__button {
+            margin: 0;
+        }
+    }
+}

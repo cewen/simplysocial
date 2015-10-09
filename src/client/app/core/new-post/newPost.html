@@ -1,0 +1,14 @@
+<div class="new-post" ng-show="vm.newPostOverlayOpen">
+    <form class="new-post__form">
+        <span class="new-post__close icon-close" ng-click="vm.closeNewPostOverlay()"></span>
+        <label class="new-post__label">Create a new message</label>
+
+        <textarea class="new-post__textarea"></textarea>
+
+        <footer class="new-post__footer">
+            <span class="new-post__add-button"><span class="new-post__add-icon icon-photo"></span> Add Photo</span>
+            <span class="new-post__add-button"><span class="new-post__add-icon icon-video"></span> Add Video</span>
+            <button class="new-post__button">Post</button>
+        </footer>
+    </form>
+</div>
