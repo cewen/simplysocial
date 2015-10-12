@@ -18,8 +18,7 @@
 
     &__account {
         .settings__input-wrapper {
-            margin-right: 75px;
-            margin-left: 135px;
+            margin-left: 115px;
             margin-bottom: 18px;
             position: relative;
 
@@ -106,5 +105,12 @@
     @include when-wider-than(tablet) {
         max-width: 575px;
         margin: 0 auto;
+
+        &__account {
+            .settings__input-wrapper {
+                margin-right: 75px;
+                margin-left: 135px;
+            }
+        }
     }
 }
