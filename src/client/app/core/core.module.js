@@ -11,6 +11,7 @@
             'ui.router',
             'app.navigation',
             'app.footer',
-            'app.newPost'
+            'app.newPost',
+            'app.uniform'
         ]);
 })();

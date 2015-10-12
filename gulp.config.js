@@ -106,8 +106,8 @@ module.exports = function() {
             overrides: {
                 outlayer: {
                     main: [
-                        "item.js",
-                        "outlayer.js"
+                        'item.js',
+                        'outlayer.js'
                     ]
                 }
             }
