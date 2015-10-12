@@ -78,6 +78,10 @@
             @include vertical-center;
         }
 
+        label {
+            max-width: calc(100% - 100px);
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
