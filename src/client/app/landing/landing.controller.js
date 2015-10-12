@@ -18,7 +18,7 @@
         });
 
         $scope.$on('addNewPost', addNewPost);
-        
+
         function addNewPost(event, post) {
             vm.posts.unshift(post);
         }

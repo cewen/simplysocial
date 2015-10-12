@@ -1,0 +1,76 @@
+$checker-width: 50px;
+$checker-height: 26px;
+
+div.checker {
+    width: $checker-width;
+    height: $checker-height;
+    margin-right: 20px;
+
+    span {
+        width: $checker-width;
+        height: $checker-height;
+        border-radius: $checker-height / 2;
+        background: #dee1e5;
+
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: $white;
+            display: block;
+            position: relative;
+            top: 1px;
+            left: 1px;
+            transition: left $global-transition-time;
+        }
+
+        &.checked {
+            background: $green;
+
+            &::before {
+                background: $white;
+                left: 25px;
+            }
+        }
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $checker-width;
+        height: $checker-height;
+    }
+}
+
+
+$radio-diameter: 22px;
+
+div.radio {
+    width: $radio-diameter;
+    height: $radio-diameter;
+    margin-right: 20px;
+
+    span {
+        width: $radio-diameter;
+        height: $radio-diameter;
+        border-radius: $radio-diameter / 2;
+        border: 1px solid $color-icons;
+        background: none;
+    
+        &.checked {
+            &::before {
+                content: '';
+                display: block;
+                width: $radio-diameter - 8;
+                height: $radio-diameter - 8;
+                background: $green;
+                border-radius: ($radio-diameter - 8) / 2;
+                position: relative;
+                top: 3px;
+                left: 3px;
+            }
+        }
+    }
+}
