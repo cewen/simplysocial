@@ -117,13 +117,17 @@ $profile-nav-bg: #f4f5f7;
     }
 
     @include when-wider-than(tablet) {
-        padding: 0 100px;
-        
+        padding: 0 40px;
+
         &__search-icon {
             position: absolute;
             right: 10px;
             top: 8px;
             pointer-events: none;
         }
+    }
+
+    @include when-wider-than(small_desktop) {
+        padding: 0 100px;
     }
 }
