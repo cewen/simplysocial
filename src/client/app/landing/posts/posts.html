@@ -25,8 +25,11 @@
         </div>
 
         <footer class="post__footer">
-            <div class="post__expand" ng-if="post.comments.length" ng-click="vm.toggleComments()">
+            <div class="post__expand" ng-if="post.comments.length && !vm.showComments" ng-click="vm.toggleComments()">
                 Expand <span class="post__expand-arrow icon-arrow-down"></span>
+            </div>
+            <div class="post__expand" ng-if="post.comments.length && vm.showComments" ng-click="vm.toggleComments()">
+                Collapse <span class="post__expand-arrow icon-arrow-down"></span>
             </div>
             <ul class="post__footer-options">
                 <li class="post__footer-option icon-share"></li>
@@ -69,8 +72,11 @@
         </div>
 
         <footer class="post__footer">
-            <div class="post__expand" ng-if="post.comments.length" ng-click="vm.toggleComments()">
+            <div class="post__expand" ng-if="post.comments.length && !vm.showComments" ng-click="vm.toggleComments()">
                 Expand <span class="post__expand-arrow icon-arrow-down"></span>
+            </div>
+            <div class="post__expand" ng-if="post.comments.length && vm.showComments" ng-click="vm.toggleComments()">
+                Collapse <span class="post__expand-arrow icon-arrow-down"></span>
             </div>
             <ul class="post__footer-options">
                 <li class="post__footer-option icon-share"></li>
