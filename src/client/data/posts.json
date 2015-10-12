@@ -5,7 +5,21 @@
         "userImage": "/images/user3.jpg",
         "text": "How to Get Inspired: the Right Way - Designmodo <a href=\"http://bit.ly/1lE4uJc\">bit.ly/1lE4uJc</a> Good stuff from <a href=\"http://twitter.com/@designmodo\">@designmodo!</a>",
         "media": "",
-        "time": "3m"
+        "time": "3m",
+        "comments": [
+            {
+                "user": "Jed Bridges",
+                "userImage": "/images/user2.jpg",
+                "text": "Great way to start the week. Thanks for sharing!",
+                "time": "1hr"
+            },
+            {
+                "user": "Ren Walker",
+                "userImage": "/images/user.jpg",
+                "text": "Feeling inspired now. Thanks for the great article!",
+                "time": "1hr"
+            }
+        ]
     },
     {
         "type": "photo",

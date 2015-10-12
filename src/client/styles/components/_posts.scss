@@ -152,6 +152,30 @@
         }
     }
 
+    .post__comments {
+        margin-right: -24px;
+        margin-left: -82px;
+        background: #f9fafc;
+
+        .post {
+            margin-bottom: 0;
+            border-width: 1px 0 0;
+            border-radius: 0;
+            background: #f9fafc;
+        }
+
+        &-reply {
+            border-top: 1px solid #dee1e5;
+            padding: 24px;
+            margin-bottom: -34px;
+
+            input {
+                width: 100%;
+                background: $white;
+            }
+        }
+    }
+
     @include when-on(tablet) {
         .posts--grid & {
             width: calc(50% - 24px);

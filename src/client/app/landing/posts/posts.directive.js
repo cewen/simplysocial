@@ -27,10 +27,12 @@
 
         vm.postType = 'all';
         vm.postLayout = 'list';
+        vm.showComments = false;
 
         vm.getIframeSrc = getIframeSrc;
         vm.setPostType = setPostType;
         vm.setPostLayout = setPostLayout;
+        vm.toggleComments = toggleComments;
 
         function setPostType(postType) {
             vm.postType = postType;
@@ -56,6 +58,10 @@
 
         function getIframeSrc(videoId) {
             return $sce.trustAsResourceUrl('https://player.vimeo.com/video/' + videoId + '?color=ffffff&badge=0');
+        }
+
+        function toggleComments() {
+            vm.showComments = !vm.showComments;
         }
     }
 })();
