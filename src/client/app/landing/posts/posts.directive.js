@@ -20,9 +20,9 @@
         return directive;
     }
 
-    SsPostsController.$inject = ['$sce'];
+    SsPostsController.$inject = ['$sce', '$rootScope'];
 
-    function SsPostsController($sce) {
+    function SsPostsController($sce, $rootScope) {
         var vm = this;
 
         vm.postType = 'all';
@@ -62,6 +62,7 @@
 
         function toggleComments() {
             vm.showComments = !vm.showComments;
+            $rootScope.$broadcast('masonry.reload');
         }
     }
 })();
