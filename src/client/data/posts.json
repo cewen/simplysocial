@@ -60,5 +60,21 @@
         "text": "Perfect day to be taking pictures <a href=\"http://instagram.com/p/mV0PUrHRwQ/\">instagram.com/p/mV0PUrHRwQ/</a>",
         "media": "/images/post-image-2.jpg",
         "time": "25m"
+    },
+    {
+        "type": "text",
+        "user": "Kerem Suer",
+        "userImage": "/images/user2.jpg",
+        "text": "8 Apps to Turn Your Pipe Dreams Into Prototypes <a href=\"http://bit.ly/1lE4uJc\">bit.ly/1lE4uJc</a> Good stuff from <a href=\"http://twitter.com/@designmodo\">@designmodo!</a>",
+        "media": "",
+        "time": "50m"
+    },
+    {
+        "type": "text",
+        "user": "Pallavi Gupta",
+        "userImage": "/images/user2.jpg",
+        "text": "Need some reading? 11 free ebooks for designers | Creative Bloq <a href=\"http://bit.ly/1lE4uJc\">bit.ly/1lE4uJc</a>",
+        "media": "",
+        "time": "10m"
     }
 ]
