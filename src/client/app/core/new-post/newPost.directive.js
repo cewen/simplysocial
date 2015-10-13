@@ -18,9 +18,9 @@
         return directive;
     }
 
-    SsNewPostController.$inject = ['$scope', '$rootScope'];
+    SsNewPostController.$inject = ['$scope', '$rootScope', '$timeout'];
 
-    function SsNewPostController($scope, $rootScope) {
+    function SsNewPostController($scope, $rootScope, $timeout) {
         var vm = this;
 
         vm.newPostOverlayOpen = false;
@@ -40,6 +40,7 @@
         function openNewPostOverlay() {
             vm.newPostOverlayOpen = true;
             angular.element('.page-content').addClass('overlay-open');
+            $timeout(function(){ angular.element('.new-post__textarea').trigger('focus'); }, 50);
         }
 
         function closeNewPostOverlay() {
